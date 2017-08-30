@@ -19,8 +19,6 @@
   "dependencies": {
     "async": "^2.5.0",
     "node-readability": "^3.0.0",
-    "request": "^2.81.0",
-    "snoowrap": "^1.14.2",
-    "utf8": "^2.1.2"
+    "snoowrap": "^1.14.2"
   }
 }
