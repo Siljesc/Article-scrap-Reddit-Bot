@@ -3,6 +3,7 @@ const newspaper = require("./newspaper.js");
 const async = require("async");
 
 class redditStream{
+
   constructor(data){
     this.username = data.username;
     this.password = data.password;
@@ -32,7 +33,7 @@ class redditStream{
     
       .then((result) => {
         console.log('Connected in Reddit as /u/' + result.name);
-        return this.reddit.getNew('vzla');
+        return this.reddit.getNew('suntesting');
       })
 
       .then((posts) => {
@@ -48,7 +49,7 @@ class redditStream{
             return cb();
           }
 
-          this.commentPost("6wz164", markdown, (err) => {
+          this.commentPost(markdown, (err) => {
             if(err) console.log(err);
             cb();
           });
@@ -61,8 +62,8 @@ class redditStream{
     setTimeout(this.loadPosts.bind(this), this.interval);
   }
 
-  commentPost(id, markdown, callback){
-    this.reddit.getSubmission(id).reply(markdown.content)
+  commentPost(markdown, callback){
+    this.reddit.getSubmission(markdown.id).reply(markdown.content)
       .then(() => callback("Done"))
       .catch((err) => console.log(err));
   }

@@ -27,7 +27,7 @@ function getMarkdown(url, callback){
 }
 
 let proccesedPosts = [];
-let blacklist = ["self.vzla", "twitter.com", "youtu.be", "i.imgur.com"];
+let blacklist = ["self.suntesting", "twitter.com", "youtu.be", "i.imgur.com"];
 
 function filterPosts(post){
   return (!blacklist.includes(post.domain) && !proccesedPosts.includes(post.id));
