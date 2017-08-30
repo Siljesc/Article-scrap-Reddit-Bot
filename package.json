@@ -1,0 +1,26 @@
+{
+  "name": "estatal-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SunriseM/estatalbot.git"
+  },
+  "author": "SunriseM",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SunriseM/estatalbot/issues"
+  },
+  "homepage": "https://github.com/SunriseM/estatalbot#readme",
+  "dependencies": {
+    "async": "^2.5.0",
+    "node-readability": "^3.0.0",
+    "request": "^2.81.0",
+    "snoowrap": "^1.14.2",
+    "utf8": "^2.1.2"
+  }
+}
