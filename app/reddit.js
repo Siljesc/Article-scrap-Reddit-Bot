@@ -40,7 +40,7 @@ class redditStream{
       })
 
       .then((markdowns) => {
-        if(markdowns === "empty") return console.log("Not new posts to finish");
+        if(markdowns === "empty") return console.log("Not new posts to proccess");
 
         async.eachSeries(markdowns, (markdown, cb) => {
           this.commentPost("6wz164", markdown, (err) => {
