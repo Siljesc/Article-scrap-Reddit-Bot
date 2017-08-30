@@ -19,6 +19,7 @@
   "dependencies": {
     "async": "^2.5.0",
     "node-readability": "^3.0.0",
-    "snoowrap": "^1.14.2"
+    "snoowrap": "^1.14.2",
+    "to-markdown": "^3.1.0"
   }
 }
