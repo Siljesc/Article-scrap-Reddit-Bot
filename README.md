@@ -1,3 +1,3 @@
 # estatalbot
 
-JS port of https://github.com/andreskrey/empleadoEstatalBot 
+JS lite port of https://github.com/andreskrey/empleadoEstatalBot 
