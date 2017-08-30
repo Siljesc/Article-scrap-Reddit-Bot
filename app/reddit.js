@@ -43,6 +43,11 @@ class redditStream{
         if(markdowns === "empty") return console.log("Not new posts to proccess");
 
         async.eachSeries(markdowns, (markdown, cb) => {
+          if(markdown.failed){
+            console.log(`Couldnt fetch markdown for post ${markdown.id}. Cause: ${markdown.failed}`);
+            return cb();
+          }
+
           this.commentPost("6wz164", markdown, (err) => {
             if(err) console.log(err);
             cb();
