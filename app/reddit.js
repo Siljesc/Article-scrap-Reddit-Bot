@@ -36,10 +36,11 @@ class redditStream{
       })
 
       .then((posts) => {
-        return newspaper.proccessPosts(posts.slice(0,5));
+        return newspaper.proccessPosts(posts.slice(0,10));
       })
 
       .then((markdowns) => {
+        if(markdowns === "empty") return console.log("Not new posts to finish");
 
         async.eachSeries(markdowns, (markdown, cb) => {
           this.commentPost("6wz164", markdown, (err) => {

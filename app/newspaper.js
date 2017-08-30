@@ -38,6 +38,8 @@ function proccessPosts(page){
   return new Promise(function(resolve){
 
     let posts = page.filter(filterPosts);
+    if(posts.length < 1) return resolve("empty");
+
     let markdowns = [];
 
     async.eachSeries(posts, (function(post, cb){
